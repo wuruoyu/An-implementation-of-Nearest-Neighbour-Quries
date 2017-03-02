@@ -1,0 +1,10 @@
+CREATE VIRTUAL TABLE poi_Rtree USING rtree(
+   id,              
+   minX, maxX,      
+   minY, maxY       
+);
+
+
+INSERT INTO poi_Rtree (id, minX, maxX, minY, maxY)
+SELECT id, minX, maxX, minY, maxY
+FROM poi_transformed;

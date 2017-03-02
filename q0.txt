@@ -1,0 +1,23 @@
+/*----------- set up the database --------------*/
+sqlite3 assignment2.db
+/*----------------------------------------------*/
+
+CREATE TABLE poi_transformed(
+id      DOUBLE PRIMARY KEY,
+minX    DOUBLE,
+maxX    DOUBLE,
+minY    DOUBLE,
+maxY    DOUBLE
+);
+
+.separator ,
+.import poi_transformed.csv poi_transformed
+
+CREATE TABLE poi_tag(
+id	DOUBLE,
+key	TEXT,
+value	TEXT
+);
+
+.separator “\t”
+.import poi_tag.tsv poi_tag

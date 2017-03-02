@@ -1,0 +1,24 @@
+MBRS:
+    sqlite> select * from q3_rtree_node;
+    1|
+
+Inner tree nodes:
+	sqlite> select * from q3_rtree_rowid;
+	1|1
+	2|1
+	3|1
+	4|1
+	5|1
+	6|1
+	7|1
+	8|1
+	9|1
+	10|1
+	11|1
+	12|1
+	13|1
+	14|1
+
+From the above queries we can see that there are only one node in the database, which is different from our result.
+We consider that in computer database, the max capable of a node to contain rectangles is pretty large instead of (2, 4) as the q2 specified. So all the rectangles
+go into one node.
